@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+progress::-moz-progress-bar { background: cyan; }
+progress::-webkit-progress-value { background: cyan; }
+progress { color: cyan; }
+
+progress[id="pctConcluido"]{
+    visibility:hidden;
+    width: 300px;
+    
+}
+.progress-bar {
+    --progress-angle: 45%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+    background: 
+      radial-gradient(closest-side, white 55%, transparent 0% 100%),
+      conic-gradient(#cbbf9f50 var(--progress-angle), rgb(214, 211, 204) 0);
+    }
+
+  body{
+    background-color: #cbbf9f50 !important;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  div{
+    text-align: center;
+  }
+
+  .principal{
+    background-color: white !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px 8px 8px 8px;
+    padding-bottom: 5px;
+    margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
+  .title{
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    font-size: 20px;
+    background-color: #746e5d;
+    color: #fff;
+    text-shadow: 0 0 2px black;
+  }
+
+  .task{
+    padding: 10px;
+  }
+
+  .separator{
+    border-bottom: 1px solid rgb(214, 209, 209);
+  }
+  
+  ul {
+    margin: 0px !important;
+    width: 100%;
+    padding-inline-start: 0px;
+}
+  li{
+    margin-top: 1px;
+    list-style: none;
+  }
+
+  input{
+    background-color: transparent !important;
+    border: 2px solid gray;
+
+  }
+
+  .input-check{
+    margin: 10px;
+    margin-left: 0px;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border-radius: 5px;
+    
+  }
+
+  .input-check:checked{
+    border: 2px solid #00000041;
+    box-shadow: 0 0 5px #00000041 inset;
+    background-color: #746e5d;
+    animation: rodar 150ms ease-out;
+  }
+
+  @keyframes rodar {
+    0%{ transform: translate(0px)}
+    25%{transform: translate(5px)}
+    50%{transform: translate(-5px)}
+    100%{transform: translate(0px)}
+  }
+
+  .btn{
+    width: 40px;
+    font-size: 15px !important;
+    font-weight: bolder !important;
+  }
+  
